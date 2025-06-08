@@ -1,0 +1,16 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: robotoMono, serif;
+}
+
+@font-face {
+  font-family: robotoMono;
+  src: url(../src/fonts/RobotoMono-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: robotoMonoItalic;
+  src: url(../src/fonts/RobotoMono-Italic-VariableFont_wght.ttf);
+}
