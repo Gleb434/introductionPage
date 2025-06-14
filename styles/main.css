@@ -1,7 +1,7 @@
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   font-family: robotoMono, serif;
 }
 
@@ -13,4 +13,137 @@
 @font-face {
   font-family: robotoMonoItalic;
   src: url(../src/fonts/RobotoMono-Italic-VariableFont_wght.ttf);
+}
+
+:root {
+  --color-bg: #081b29;
+  --color-text: #fff;
+  --hover-link: #00abf0;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 10%;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+.logo {
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.navbar a {
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 35px;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  color: var(--hover-link);
+}
+
+.home {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0 10%;
+}
+
+.home-content {
+  max-width: 600px;
+}
+
+.home-content h1 {
+  font-size: 55px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+
+.home-content h3 {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--hover-link);
+}
+
+.home-content p {
+  font-size: 16px;
+  margin: 20px 0 40px;
+}
+
+.home-content .btn {
+  display: flex;
+  justify-content: space-between;
+  width: 345px;
+  height: 50px;
+}
+
+.btn a {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 100%;
+  background: var(--hover-link);
+  border: 2px solid var(--hover-link);
+  border-radius: 8px;
+  font-size: 19px;
+  color: var(--color-bg);
+  font-weight: 600;
+  letter-spacing: 1px;
+  z-index: 1;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.btn a:hover {
+  color: var(--hover-link);
+}
+
+.btn a:nth-child(2) {
+  background: transparent;
+  color: var(--hover-link);
+}
+
+.btn a:nth-child(2):hover {
+  color: var(--color-text);
+}
+
+.btn a:nth-child(2)::before {
+  background: var(--hover-link);
+}
+
+.btn a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: var(--color-bg);
+  z-index: -1;
+  transition: 0.5s;
+}
+
+.btn a:hover::before {
+  width: 100%;
 }
