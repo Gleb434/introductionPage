@@ -45,8 +45,21 @@ a {
 }
 
 .logo {
+  position: relative;
   font-size: 25px;
   font-weight: 600;
+}
+
+.logo::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--color-bg);
+  animation: showRight 1s ease forwards;
+  animation-delay: 0.4s;
 }
 
 .navbar a {
@@ -56,7 +69,8 @@ a {
   transition: 0.3s;
 }
 
-.navbar a:hover {
+.navbar a:hover,
+.navbar a.active {
   color: var(--hover-link);
 }
 
@@ -72,28 +86,81 @@ a {
 }
 
 .home-content h1 {
+  position: relative;
   font-size: 55px;
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 10px;
 }
 
+.home-content h1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--color-bg);
+  animation: showRight 1s ease forwards;
+  animation-delay: 1s;
+}
+
 .home-content h3 {
+  position: relative;
   font-size: 32px;
   font-weight: 700;
   color: var(--hover-link);
 }
 
+.home-content h3::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--color-bg);
+  animation: showRight 1s ease forwards;
+  animation-delay: 1.3s;
+}
+
 .home-content p {
+  position: relative;
   font-size: 16px;
   margin: 20px 0 40px;
 }
 
+.home-content p::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--color-bg);
+  animation: showRight 1s ease forwards;
+  animation-delay: 1.6s;
+}
+
 .home-content .btn {
+  position: relative;
   display: flex;
   justify-content: space-between;
   width: 345px;
   height: 50px;
+}
+
+.home-content .btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--color-bg);
+  animation: showRight 1s ease forwards;
+  animation-delay: 1.9s;
+  z-index: 2;
 }
 
 .btn a {
@@ -156,6 +223,19 @@ a {
   justify-content: space-between;
 }
 
+.home-sci::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--color-bg);
+  animation: showBottom 1s ease forwards;
+  animation-delay: 3.3s;
+  z-index: 2;
+}
+
 .home-sci a {
   position: relative;
   display: inline-flex;
@@ -190,4 +270,18 @@ a {
 
 .home-sci a:hover::before {
   width: 100%;
+}
+
+/* KEYFRAMES ANIMATION */
+
+@keyframes showRight {
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes showBottom {
+  100% {
+    height: 0;
+  }
 }
